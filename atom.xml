@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://briz-519.github.io</id>
     <title>Briz&apos;s home of notes</title>
-    <updated>2020-08-11T10:24:50.141Z</updated>
+    <updated>2020-08-11T10:26:11.358Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://briz-519.github.io"/>
     <link rel="self" href="https://briz-519.github.io/atom.xml"/>
@@ -10,6 +10,231 @@
     <logo>https://briz-519.github.io/images/avatar.png</logo>
     <icon>https://briz-519.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Briz&apos;s home of notes</rights>
+    <entry>
+        <title type="html"><![CDATA[HTML（待更新）]]></title>
+        <id>https://briz-519.github.io/post/htmldai-geng-xin/</id>
+        <link href="https://briz-519.github.io/post/htmldai-geng-xin/">
+        </link>
+        <updated>2020-08-11T10:25:49.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="html">HTML</h2>
+<p>查看浏览器储存的密码：</p>
+<p>1.F12后控制台输入：document.querySelector('input[type=password]').value</p>
+<p>2.将password改为text</p>
+<html>html 根标签</html>
+<p>p 段落标签</p>
+<h1>h1-h6 标题标签</h1>
+<p><strong>strong 加粗标签</strong></p>
+<p><em>em 斜体标签</em></p>
+<p><del>del 定义被删除标签</del></p>
+<address>address 地址标签（成段展示+斜体）=p+em</address>
+<div style="width: 50px; height: 50px; background-color:red;">div 分块容器</div>
+<p>div*n    <!--回车后创建n个div框架--></p>
+<pre><code class="language-html">div*3
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+</code></pre>
+<p>空格/回车仅为分隔符，多个空格/回车也仅为一个分隔符</p>
+<p><code>&amp;nbsp;</code> 空格标签</p>
+<p><code>&amp;lt;</code> &lt; 小于符号（less than）</p>
+<p><code>&amp;gt;</code> &gt; 大于符号（great than）</p>
+<p><br/> 换行标签</p>
+<p>li定义列表项目</p>
+<p>ol 定义有序列表</p>
+<blockquote>
+<p>属性:</p>
+<p>​	type=”1” 按照数字排序</p>
+<p>​    type=”a/A” 按照小写/大写字母排序</p>
+<p>​    type=”i/I” 按照小写/大写罗马数字排序</p>
+<p>​    reversed=”reversed” 按照倒数排序</p>
+<p>​    start=”n” 从n开始排序</p>
+</blockquote>
+<p><code>eg:</code></p>
+<ol type="I" reversed="reversed" start="7">
+     <li>Green Light</li>
+     <li>Sober</li>
+</ol>
+<ol type="A" reversed="reversed" start="2">
+     <li>Green Light</li>
+     <li>Sober</li>
+</ol>
+<p>ul 定义无序列表</p>
+<blockquote>
+<p>属性:</p>
+<p>​	type=”disc” 按照实心点排序（discircle）</p>
+<p>​    type=”square” 按照方块排序</p>
+<p>​    type=”circle” 按照空心圆排序</p>
+</blockquote>
+<p>注：ul/li非常常用在父子类的需求中，比如网页中的导航栏</p>
+<p><code>eg:</code></p>
+<ul type="circle">
+    <li>Perfect Place</li>
+    <li>Homemade Dynamite</li>
+    <li>The Louvre</li>
+    <li>Write In The Dark</li>
+</ul>
+<p>img 图片插入标签</p>
+<blockquote>
+<p>属性:</p>
+<p>​	src=”图片的来源url”</p>
+<p>​    alt=”简单概括图片的说明从而在图片出错时显示”</p>
+<p>​    title=”当鼠标悬停在图片上时显示的说明”</p>
+</blockquote>
+<img src="D:\photos\Melodrama.jpg" alt="Melodrama" title="Melodrama" style="width: 200px; height: 200px;">
+<p><a>a标签</a></p>
+<ol>
+<li>超链接标签</li>
+</ol>
+<blockquote>
+<p>属性:</p>
+<p>href=&quot;http://www.baidu.com&quot; 指向链接目标的属性(需要具体带上http://否则无法跳转)</p>
+<p>target=&quot;_self&quot; 默认值，在相同的页面打开链接</p>
+<p>target=&quot;_blank&quot; 在新窗口打开链接</p>
+</blockquote>
+<ol start="2">
+<li>a标签也可以当作<code>锚点</code>实现回到顶部功能</li>
+</ol>
+<p><code>eg:</code></p>
+<p>在顶部放置一个空div并给与id<code>&lt;div id=&quot;top&quot;&gt;&lt;/div&gt;</code></p>
+<p>再使用a标签用来识别空div的id并回到顶部<code>&lt;a href=&quot;#top&quot;&gt;return top&lt;/a&gt;</code></p>
+<ol start="3">
+<li>a标签也可以跳转打电话(多用于手机端)</li>
+</ol>
+<p><code>&lt;a href=&quot;cal:176xxxx5519&quot;&gt;点击此处便会跳转打电话&lt;/a&gt;</code></p>
+<p>4.协议限定符，可以在a标签内写入JavaScript代码</p>
+<p><code>eg：</code></p>
+<p>点击后进入无限警告循环窗口</p>
+<p><a href="javascript:while(1){alert('Do you want to close me?')}">Please click me!😢</a></p>
+<p>form 表单标签</p>
+<p><code>eg:</code></p>
+<form action="" method="GET">
+    <p>User:<input type="text" name="username"></p>
+    <p>Password:<input type="passwoed" name="password"></p>
+    <p>The best song in this album:</p>
+    <p><input type="radio" name="song" value="song1" checked="checked">Green Light</p>
+    <p><input type="radio" name="song" value="song2">Sober</p>
+    <p><input type="radio" name="song" value="song3">Liability</p>
+    <p>
+                <p>The best song in this album:</p>
+                <select name="best" id="">
+                    <option value="song1">Green Light</option>
+                    <option value="song2">Sober</option>
+                    <option value="song3">Liability</option>
+                </select>
+            </p>
+    <input type="submit" vaule="Login">
+</form>
+<p>​</p>
+<blockquote>
+<p>type=&quot;name&quot;与type=&quot;password&quot;的区别为前者输入内容是可视的后者是圆点取代的暗文</p>
+<p>(若不跟name属性则不会有数据被后台一一对应并识别)</p>
+<p>type=&quot;submit&quot;为提交框，value的值为提交框的显示内容</p>
+<p>type=&quot;radio&quot;为单选框标签属性，type=&quot;checkbox&quot;为多选框标签属性，value的值为该选项传给后台的值，跟上面的name属性同理</p>
+<p>(不跟name则不会被归入一类，好比选项不是同一道题因此无法达到单选的需求)</p>
+<p>checked=&quot;checked&quot;是默认勾选该选项的属性</p>
+<p>select属性为多选下拉菜单标签</p>
+</blockquote>
+<p><code>addition:</code></p>
+<form>
+    <p>Username:<input type="text" value="Please input username" onfocus="if(this.value=='Please input username'){this.value=''}" onblur="if(this.value==''){this.value='Please input username'}"></p>
+</form>
+<p><code>存在bug：若输入Please input username点击外窗口则会消失</code></p>
+<h2 id="css">CSS</h2>
+<p>行间样式（直接在行间插入）：</p>
+<div style="
+            width:100px;
+            height:100px;
+            background-color:blue;
+            "></div>
+<p>页面级CSS：</p>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            width:100px;
+            height:100px;
+            background-color:pink;
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    	&lt;div&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>外部CSS文件：<br>
+新建.css文件并在头部标签进行连接（路径不要填错！）</p>
+<pre><code class="language-html">&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&gt;
+  &lt;/head&gt;
+</code></pre>
+<blockquote>
+<p>服务器端加载页面时，html代码和css代码是异步加载（同时进行）而并非同步加载（一个加载完再加载另外一个）</p>
+</blockquote>
+<h4 id="css选择器">CSS选择器</h4>
+<p>id-&gt;#    <code>一对一</code></p>
+<p>class-&gt;.  <code>一对多</code></p>
+<p><code>且id优先级大于class</code></p>
+<p>标签选择器：直接使用标签名字从而控制HTML中所有该标签属性</p>
+<p>通配符选择器：控制全局标签属性</p>
+<p>!important优先级最高</p>
+<p>父子/派生选择器：</p>
+<p>eg：div em{}    控制div下所有的em标签</p>
+<p>直接子元素选择器：</p>
+<p>eg：</p>
+<pre><code class="language-html">&lt;div&gt;
+            &lt;span&gt;
+                123
+            &lt;/span&gt;
+            &lt;strong&gt;
+                &lt;span&gt;111&lt;/span&gt;
+            &lt;/strong&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">div&gt;span{
+    background-color: olive;
+}
+</code></pre>
+<p>只会改变div直接对应的span即123变色</p>
+<h4 id="css权重">CSS权重</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>权重值（256进制）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!important</td>
+<td>infinity</td>
+</tr>
+<tr>
+<td>行间样式</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>id</td>
+<td>100</td>
+</tr>
+<tr>
+<td>class/属性/伪类</td>
+<td>10</td>
+</tr>
+<tr>
+<td>标签/伪元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>通配符</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python1.0]]></title>
         <id>https://briz-519.github.io/post/python10/</id>
